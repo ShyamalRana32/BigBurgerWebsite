@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigBurger Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="nav-bar">
+            <div class="nav-logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <div class="nav-links" id="nav-links">
+                <i class="fa fa-close" onclick="closeMenu()"></i>
+                <ul>
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="about.html"><li>About</li></a>
+                    <a href="recipe.html"><li>Recipe</li></a>
+                </ul>
+                <form class="search-form" id="searchForm">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </form>
+                <button id="authButton" type="button" class="btn">SIGN IN</button>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </div>
+        <div class="banner-title">
+            <h1>Good<span> food is the foundation of <br>genuine</span> Happines</h1>
+            <a href="recipe.html" class="btn">EXPLORE</a>
+        </div>
+        <div class="verticle-bar">
+            <div class="search-icon">
+                <!-- <a href="search.html"><i class="fa fa-search"></i></a> -->
+                <!-- <i class="fa fa-th-list"></i> -->
+                
+            </div>
+            <div class="social-icon">
+               
+                <a href="https://facebook.com"> <i class="fa fa-facebook"></i></a>
+                <a href="https://instagram.com">  <i class="fa fa-instagram"></i></a>
+                <a href="https://twitter.com"> <i class="fa fa-twitter"></i></a>
+            </div>
+        </div>
+        <!-- Notifications section (if needed) -->
+    </div>
+
+    <script>
+        // Check login status
+        document.addEventListener('DOMContentLoaded', function() {
+            const isLoggedIn = localStorage.getItem('loggedIn');
+            const authButton = document.getElementById('authButton');
+
+            if (isLoggedIn === 'true') {
+                // Update button to show logout option
+                authButton.textContent = 'Logout';
+                authButton.addEventListener('click', function() {
+                    localStorage.removeItem('loggedIn');
+                    window.location.href = 'login.html';
+                });
+            } else {
+                // Show sign-in button if not logged in
+                authButton.textContent = 'SIGN IN';
+                authButton.addEventListener('click', function() {
+                    window.location.href = 'login.html';
+                });
+            }
+        });
+
+        // Menu handling functions
+        function showMenu() {
+            document.getElementById('nav-links').style.right = "0";
+        }
+
+        function closeMenu() {
+            document.getElementById('nav-links').style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

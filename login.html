@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <!-- Ring div starts here -->
+    <div class="ring">
+        <i style="--clr:#00ff0a;"></i>
+        <i style="--clr:#ff0057;"></i>
+        <i style="--clr:#fffd44;"></i>
+        <div class="login">
+            <h2>Login</h2>
+            <!-- Form element with id 'loginForm' -->
+            <form id="loginForm">
+                <div class="inputBx">
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                <div class="inputBx">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <div class="inputBx">
+                    <input type="submit" value="Sign in">
+                </div>
+                <div class="links">
+                    <a href="#">Forget Password</a>
+                    <a href="#">Signup</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Ring div ends here -->
+
+    <script>
+        // Random credentials (for demo purposes)
+        const validUsername = "user123";
+        const validPassword = "pass123";
+
+        // JavaScript for handling form submission
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get input values
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Check if credentials match
+            if (username === validUsername && password === validPassword) {
+                // Set a flag in local storage
+                localStorage.setItem('loggedIn', 'true');
+                // Redirect to home page
+                window.location.href = 'index.html';
+            } else {
+                alert('Invalid username or password. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>

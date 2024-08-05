@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - BigBurger Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="nav-bar">
+            <div class="nav-logo">
+                <img src="logo.png" alt="BigBurger Logo">
+            </div>
+            <div class="nav-links" id="nav-links">
+                <i class="fa fa-close" onclick="closeMenu()"></i>
+                <ul>
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="about.html"><li>About</li></a>
+                    <a href="recipe.html"><li>Recipe</li></a>
+                </ul>
+                <button type="button" class="btn">SIGN IN</button>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </div>
+        <div class="about-banner">
+            <h1>About Us</h1>
+        </div>
+    </div>
+    <div class="about-content">
+        <div class="container">
+            <h2>Welcome to BigBurger!</h2>
+            <p>At BigBurger, we are passionate about delivering the finest and most delicious burgers. Founded on the principle of using fresh, high-quality ingredients, our goal is to provide a memorable dining experience for all our customers.</p>
+            <p>Our story began with a simple idea: to create a burger that stands out from the rest. With our commitment to quality and flavor, we have grown into a beloved brand that customers can rely on for a fantastic meal.</p>
+            <p>Whether you're here for a quick bite or a full meal, we strive to make each visit special. From our classic cheeseburger to our signature creations, every burger is crafted with care and precision.</p>
+            <h3>Our Mission</h3>
+            <p>Our mission is to offer top-notch food that brings joy to our customers. We aim to be a place where people come together to enjoy great food and make lasting memories.</p>
+            <h3>Our Values</h3>
+            <ul>
+                <li><strong>Quality:</strong> We use only the best ingredients in every burger we serve.</li>
+                <li><strong>Customer Satisfaction:</strong> Your experience matters to us. We are committed to providing excellent service.</li>
+                <li><strong>Innovation:</strong> We constantly explore new recipes and flavors to keep our menu exciting.</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 BigBurger. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        var show = document.getElementById("nav-links");
+        function showMenu(){
+            show.style.right = "0";
+        }
+        function closeMenu(){
+            show.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes - BigBurger Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="nav-bar">
+            <div class="nav-logo">
+                <img src="logo.png" alt="BigBurger Logo">
+            </div>
+            <div class="nav-links" id="nav-links">
+                <i class="fa fa-close" onclick="closeMenu()"></i>
+                <ul>
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="about.html"><li>About</li></a>
+                    <a href="recipe.html"><li>Recipe</li></a>
+                </ul>
+                <button type="button" class="btn">SIGN IN</button>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </div>
+        <div class="recipe-banner">
+            <h1>Our Delicious Recipes</h1>
+        </div>
+    </div>
+    <div class="recipe-content">
+        <div class="container">
+            <h2>Featured Burgers</h2>
+            <div class="recipe-card">
+                <img src="burger1.jpg" alt="Classic Burger">
+                <div class="recipe-info">
+                    <h3>Classic Cheeseburger</h3>
+                    <p>Our Classic Cheeseburger is made with a juicy beef patty, melted cheddar cheese, fresh lettuce, tomatoes, and pickles, all served on a toasted brioche bun.</p>
+                    <button type="button" class="btn">See Recipe</button>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="burger2.jpg" alt="BBQ Burger">
+                <div class="recipe-info">
+                    <h3>BBQ Bacon Burger</h3>
+                    <p>This BBQ Bacon Burger features a smoky barbecue sauce, crispy bacon, and melted gouda cheese, topped with onion rings and served on a toasted sesame seed bun.</p>
+                    <button type="button" class="btn">See Recipe</button>
+                </div>
+            </div>
+            <div class="recipe-card">
+                <img src="burger3.jpg" alt="Veggie Burger">
+                <div class="recipe-info">
+                    <h3>Veggie Delight Burger</h3>
+                    <p>Our Veggie Delight Burger is packed with a flavorful veggie patty, fresh avocado slices, grilled mushrooms, and a zesty chipotle mayo, all on a whole grain bun.</p>
+                    <button type="button" class="btn">See Recipe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 BigBurger. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        var show = document.getElementById("nav-links");
+        function showMenu(){
+            show.style.right = "0";
+        }
+        function closeMenu(){
+            show.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
